@@ -21,7 +21,8 @@ mixtape.append("Dua Lipa - Break My Heart")
 mixtape.append("Surfaces - Sunday Best")
 mixtape.append("Roddy Ricch - The Box")
 
-print(mixtape.count)
+print("Song count: " + String(mixtape.count))
+print()
 
 mixtape.remove(at: 4)
 mixtape.remove(at: 7)
@@ -30,3 +31,27 @@ print("All Songs")
 for song in mixtape {
   print(song)
 }
+
+var i = 0
+print()
+print("Side A:")
+for song in mixtape {
+  if i <= 3 {
+    print(song)
+  }
+  i+=1
+}
+print()
+var j = 0
+print("Side B:")
+for song in mixtape {
+  if j >= 4 {
+    print(song)
+  }
+  j+=1
+}
+
+
+
+
+
