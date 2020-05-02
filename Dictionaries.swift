@@ -63,3 +63,17 @@ print(sunflowerScientific)
 if let lilyScientific = flowerNames["Lily"] {
   print("A lily is referred to as a \(lilyScientific) in the science community.")
 }
+
+//Iterating dictionary
+var mythology = [
+  "Zeus": "Jupiter",
+  "Athena": "Minerva",
+  "Poseidon": "Neptune",
+  "Demeter": "Ceres"]
+
+// Write your code below 🏛️
+
+for (greekName, romanName) in mythology {
+  print("\(greekName) is also known as \(romanName)"
+  )
+}
