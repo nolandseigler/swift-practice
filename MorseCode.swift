@@ -47,7 +47,7 @@ for element in englishText {
 print(morseText)
 //
 //Decode Message
-var decodeMessage = ""
+var decodedMessage = ""
 
 var morseCodeArray = [String]()
 
@@ -72,7 +72,22 @@ for char in secretMessage {
   }
 }
 morseCodeArray.append(currMorse)
+
 print(morseCodeArray)
+
+var morseToLetter = [String: String] ()
+
+for (letter, morseChar) in letterToMorse {
+  morseToLetter[morseChar] = letter
+}
+
+for morseValue in morseCodeArray {
+  if let letterChar = morseToLetter[morseValue] {
+    decodedMessage.append(letterChar)
+  } else {
+    decodedMessage += " "
+  }
+}
+
+print(decodedMessage)
 //
-
-
