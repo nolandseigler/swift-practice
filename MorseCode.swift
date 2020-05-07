@@ -49,5 +49,30 @@ print(morseText)
 //Decode Message
 var decodeMessage = ""
 
+var morseCodeArray = [String]()
+
+var currMorse = ""
+//split into array where elements are morse code words
+for char in secretMessage {
+  if char != " " {
+    //instead of doing below use append. in swift chars and string dont play nicely.
+    // currMorse += "\(char)"
+    currMorse.append(char)
+  } else {
+    switch currMorse {
+      case "":
+        currMorse = " "
+      case " ":
+        morseCodeArray.append(" ")
+        currMorse = ""
+      default:
+        morseCodeArray.append(currMorse)
+        currMorse = ""
+    }
+  }
+}
+morseCodeArray.append(currMorse)
+print(morseCodeArray)
+//
 
 
